@@ -24,7 +24,7 @@ def test_no_env_uses_built_in_defaults(monkeypatch):
     assert config["deep_think_llm"] == "gpt-6-sol"
     assert config["quick_think_llm"] == "gpt-6-luna"
     assert config["backend_url"] is None
-    assert config["max_debate_rounds"] == 1
+    assert config["max_debate_rounds"] == 3
     assert config["checkpoint_enabled"] is False
 
 
@@ -97,7 +97,7 @@ def test_empty_env_value_is_passthrough(monkeypatch):
         TRADINGAGENTS_MAX_DEBATE_ROUNDS="",
     )
     assert config["llm_provider"] == "openai"
-    assert config["max_debate_rounds"] == 1
+    assert config["max_debate_rounds"] == 3
 
 
 def test_empty_path_value_keeps_the_default_path(monkeypatch):

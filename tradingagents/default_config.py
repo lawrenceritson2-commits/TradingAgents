@@ -130,7 +130,7 @@ def build_default_config() -> dict:
         # Internal agent debate stays in English for reasoning quality
         "output_language": "English",
         # Debate and discussion settings
-        "max_debate_rounds": 1,
+        "max_debate_rounds": 3,
         "max_risk_discuss_rounds": 1,
         "max_recur_limit": 100,
         # Rounds of tool calls an analyst may make before it is asked for its report.
